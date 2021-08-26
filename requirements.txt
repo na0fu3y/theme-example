@@ -1,2 +1,1 @@
-notebook
-xeus-python
+beakerx-kernel-sql==2.0.0
