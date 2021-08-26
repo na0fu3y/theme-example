@@ -2,4 +2,5 @@ name: theme-example
 channels:
   - conda-forge
 dependencies:
-  - xeus-sqlite
+  - ipywidgets
+  - beakerx
