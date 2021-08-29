@@ -2,5 +2,5 @@ name: theme-example
 channels:
   - conda-forge
 dependencies:
-  - ipywidgets
   - beakerx
+  - jupyterlab
