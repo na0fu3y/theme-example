@@ -15,6 +15,7 @@ jobs:
 
     - run: |
         $CONDA/bin/conda env update --file environment.yml --name base
+        $CONDA/bin/conda install -c conda-forge jupyter-book
         $CONDA/bin/jupyter-book build .
 
     - uses: peaceiris/actions-gh-pages@v3.6.1
