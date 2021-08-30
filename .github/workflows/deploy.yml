@@ -9,12 +9,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - uses: conda-incubator/setup-miniconda@v2
+    - uses: actions/setup-python@v2
       with:
-        environment-file: environment.yml
         python-version: 3.7
 
-    - run: jupyter-book build .
+    - run: |
+        $CONDA/bin/conda env update --file environment.yml --name base
+        $CONDA/bin/jupyter-book build .
 
     - uses: peaceiris/actions-gh-pages@v3.6.1
       with:
