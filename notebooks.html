@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -44,7 +44,7 @@
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
@@ -79,7 +79,7 @@
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -235,260 +235,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>java.nio.file.NoSuchFileException: /home/runner/.jupyter/beakerx_tabledisplay.json
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:219)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at java.base/java.nio.file.spi.FileSystemProvider.newOutputStream(FileSystemProvider.java:478)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at java.base/java.nio.file.Files.newOutputStream(Files.java:220)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at java.base/java.nio.file.Files.write(Files.java:3425)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at com.twosigma.beakerx.table.BxTableSettings.save(BxTableSettings.java:106)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at com.twosigma.beakerx.table.BxTableSettings.load(BxTableSettings.java:69)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at com.twosigma.beakerx.table.BxTableSettings.options(BxTableSettings.java:49)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at com.twosigma.beakerx.table.serializer.TableDisplaySerializer.serialize(TableDisplaySerializer.java:100)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at com.twosigma.beakerx.table.serializer.TableDisplaySerializer.serialize(TableDisplaySerializer.java:28)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:130)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at com.fasterxml.jackson.databind.ObjectMapper._convert(ObjectMapper.java:3437)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at com.fasterxml.jackson.databind.ObjectMapper.convertValue(ObjectMapper.java:3378)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at com.twosigma.beakerx.table.TableDisplayToJson.toJson(TableDisplayToJson.java:117)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at com.twosigma.beakerx.table.TableDisplay.serializeToJsonObject(TableDisplay.java:742)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at com.twosigma.beakerx.widget.BeakerxWidget$1.&lt;init&gt;(BeakerxWidget.java:75)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at com.twosigma.beakerx.widget.BeakerxWidget.doSendModel(BeakerxWidget.java:73)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at com.twosigma.beakerx.table.TableDisplay.doSendModel(TableDisplay.java:788)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at com.twosigma.beakerx.widget.BeakerxWidget.sendModel(BeakerxWidget.java:69)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at com.twosigma.beakerx.widget.BeakerxWidget.beforeDisplay(BeakerxWidget.java:105)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at com.twosigma.beakerx.widget.Widget.display(Widget.java:74)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at com.twosigma.beakerx.MIMEContainerFactory.createMIMEContainersFromObject(MIMEContainerFactory.java:62)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at com.twosigma.beakerx.MIMEContainerFactory.createMIMEContainers(MIMEContainerFactory.java:46)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at com.twosigma.beakerx.kernel.msg.MessageCreator.createFinishResult(MessageCreator.java:278)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at com.twosigma.beakerx.kernel.msg.MessageCreator.createFinish(MessageCreator.java:194)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at com.twosigma.beakerx.kernel.msg.MessageCreator.createMessage(MessageCreator.java:185)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at com.twosigma.beakerx.kernel.threads.ExecutionResultSender.update(ExecutionResultSender.java:44)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at com.twosigma.beakerx.jvm.object.SimpleEvaluationObject.finished(SimpleEvaluationObject.java:72)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at com.twosigma.beakerx.kernel.CodeFrame.handleResult(CodeFrame.java:40)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at com.twosigma.beakerx.kernel.PlainCode.executeLastFrame(PlainCode.java:52)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at com.twosigma.beakerx.kernel.Code.execute(Code.java:94)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at com.twosigma.beakerx.kernel.handler.ExecuteRequestHandler.runCode(ExecuteRequestHandler.java:90)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at com.twosigma.beakerx.kernel.handler.ExecuteRequestHandler.lambda$handleMsg$1(ExecuteRequestHandler.java:71)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at com.twosigma.beakerx.kernel.handler.ExecuteRequestHandler.handleMsg(ExecuteRequestHandler.java:77)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at com.twosigma.beakerx.kernel.handler.ExecuteRequestHandler.lambda$handle$0(ExecuteRequestHandler.java:61)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	at java.base/java.lang.Thread.run(Thread.java:829)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_minor": 0, "model_id": "c06d36f9-1110-40ef-a94e-1012271651c7", "version_major": 2}
+{"version_minor": 0, "model_id": "37760640-445d-4aae-87fc-9f9f696b5d7d", "version_major": 2}
 </script></div>
 </div>
 <p>There is a lot more that you can do with outputs (such as including interactive outputs)
@@ -497,7 +245,7 @@ with your book. For more information about this, see <a class="reference externa
 
 
 <script type="application/vnd.jupyter.widget-state+json">
-{"state": {"c06d36f9-1110-40ef-a94e-1012271651c7": {"model_name": "TableDisplayModel", "model_module": "beakerx_tabledisplay", "model_module_version": "*", "state": {"_model_module_version": "*", "_model_name": "TableDisplayModel", "_view_module_version": "*", "_model_module": "beakerx_tabledisplay", "_view_module": "beakerx_tabledisplay", "_view_name": "TableDisplayView", "loadMoreRows": "loadMoreServerInit", "model": {"hasDoubleClickAction": false, "doubleClickTag": null, "contextMenuItems": [], "contextMenuTags": {}, "type": "TableDisplay", "columnNames": ["a"], "types": ["java.lang.Object"], "subtype": "TableDisplay", "stringFormatForType": {}, "stringFormatForColumn": {}, "rendererForType": {}, "rendererForColumn": {}, "alignmentForType": {}, "alignmentForColumn": {}, "columnsFrozen": {}, "columnsVisible": {}, "columnOrder": [], "cellHighlighters": [], "tooltips": [], "dataFontSize": null, "headerFontSize": null, "fontColor": [], "rowsToShow": 25, "headersVertical": false, "hasIndex": null, "timeZone": null, "loadingMode": "ALL", "auto_link_table_links": false, "show_publication": true, "values": [[1], [2]], "tooManyRows": false}}}}, "version_major": 2, "version_minor": 0}
+{"state": {"37760640-445d-4aae-87fc-9f9f696b5d7d": {"model_name": "TableDisplayModel", "model_module": "beakerx", "model_module_version": "*", "state": {"_model_module_version": "*", "_model_name": "TableDisplayModel", "_view_module_version": "*", "_model_module": "beakerx", "_view_module": "beakerx", "_view_name": "TableDisplayView", "model": {"hasDoubleClickAction": false, "doubleClickTag": null, "contextMenuItems": [], "contextMenuTags": {}, "type": "TableDisplay", "columnNames": ["a"], "types": ["java.lang.Object"], "subtype": "TableDisplay", "stringFormatForType": {}, "stringFormatForColumn": {}, "rendererForType": {}, "rendererForColumn": {}, "alignmentForType": {}, "alignmentForColumn": {}, "columnsFrozen": {}, "columnsFrozenRight": {}, "columnsVisible": {}, "columnOrder": [], "cellHighlighters": [], "tooltips": [], "dataFontSize": null, "headerFontSize": null, "fontColor": [], "headersVertical": false, "hasIndex": null, "timeZone": null, "values": [[1], [2]], "tooManyRows": false}}}}, "version_major": 2, "version_minor": 0}
 </script>
 
 
@@ -524,23 +272,11 @@ with your book. For more information about this, see <a class="reference externa
               </div>
               
         
+        <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="README.html" title="previous page">ようこそ</a>
 
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="README.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">ようこそ</p>
-            </div>
-        </a>
-    </div>
-
-</div>
+        </div>
         
         </div>
     </div>
