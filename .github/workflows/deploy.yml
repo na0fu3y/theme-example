@@ -15,7 +15,9 @@ jobs:
 
     - run: pip install beakerx jupyter-book
 
-    - run: ./postBuild
+    - run: |
+        jupyter labextension install @jupyter-widgets/jupyterlab-manager
+        jupyter labextension install beakerx-jupyterlab
 
     - run: jupyter-book build .
 
