@@ -18,6 +18,7 @@ jobs:
     - run: |
         beakerx_kernel_sql install
         beakerx_tabledisplay install
+        jupyter labextension install @jupyter-widgets/jupyterlab-manager
 
     - run: jupyter-book build .
 
