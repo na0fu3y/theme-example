@@ -17,6 +17,7 @@ jobs:
 
     - run: |
         beakerx_kernel_sql install
+        beakerx_tabledisplay install
 
     - run: jupyter-book build .
 
