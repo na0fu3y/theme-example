@@ -16,6 +16,7 @@ jobs:
     - run: pip install beakerx beakerx-kernel-sql beakerx-tabledisplay jupyterlab jupyter-book
 
     - run: |
+        beakerx install
         beakerx_kernel_sql install
         beakerx_tabledisplay install
         jupyter labextension install @jupyter-widgets/jupyterlab-manager
