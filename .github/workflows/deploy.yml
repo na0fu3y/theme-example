@@ -9,19 +9,15 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - uses: actions/setup-python@v1
+    - uses: conda-incubator/setup-miniconda@v2
       with:
+        environment-file: environment.yml
         python-version: 3.7
 
-    - run: pip install beakerx beakerx-kernel-sql beakerx-tabledisplay jupyterlab jupyter-book
-
     - run: |
-        beakerx install
-        beakerx_kernel_sql install
-        beakerx_tabledisplay install
         jupyter labextension install @jupyter-widgets/jupyterlab-manager
-
-    - run: jupyter-book build .
+        jupyter labextension install beakerx-jupyterlab
+        jupyter-book build .
 
     - uses: peaceiris/actions-gh-pages@v3.6.1
       with:
