@@ -13,7 +13,7 @@ jobs:
       with:
         python-version: 3.7
 
-    - run: pip install beakerx beakerx-kernel-sql beakerx-tabledisplay jupyter-book
+    - run: pip install beakerx beakerx-kernel-sql beakerx-tabledisplay jupyterlab jupyter-book
 
     - run: |
         beakerx_kernel_sql install
