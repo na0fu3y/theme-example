@@ -13,11 +13,9 @@ jobs:
       with:
         python-version: 3.7
 
-    - run: pip install beakerx beakerx-kernel-sql jupyterlab jupyter-book
+    - run: pip install beakerx beakerx-kernel-sql beakerx-tabledisplay jupyter-book
 
     - run: |
-        jupyter labextension install @jupyter-widgets/jupyterlab-manager
-        jupyter labextension install beakerx-jupyterlab
         beakerx_kernel_sql install
 
     - run: jupyter-book build .
