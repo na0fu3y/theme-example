@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>テスト &#8212; Query Me</title>
+    <title>日付別の売り上げ &#8212; Query Me</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,9 +51,10 @@
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="ようこそ" href="README.html" />
+    <link rel="prev" title="Query Me" href="README.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -84,14 +85,14 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="README.html">
-   ようこそ
+   Query Me
   </a>
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   テスト
+   日付別の売り上げ
   </a>
  </li>
 </ul>
@@ -204,8 +205,8 @@
               <div>
                 
   <div class="section" id="id1">
-<h1>テスト<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<p>SQLお試し。</p>
+<h1>日付別の売り上げ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>購買履歴から、日付別の売り上げを計算するクエリです。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-SQL notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">defaultDatasource</span> <span class="n">jdbc</span><span class="p">:</span><span class="n">sqlite</span><span class="p">::</span><span class="n">memory</span><span class="p">:</span>
@@ -215,35 +216,37 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-SQL notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="ss">&quot;a&quot;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-SQL notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="mi">1</span> <span class="k">AS</span> <span class="n">a</span>
-<span class="k">UNION</span> <span class="k">ALL</span>
-<span class="k">SELECT</span> <span class="mi">2</span> <span class="k">AS</span> <span class="n">a</span>
+<div class="highlight-SQL notranslate"><div class="highlight"><pre><span></span><span class="k">WITH</span> <span class="n">purchases</span> <span class="k">AS</span> <span class="p">(</span>
+  <span class="k">SELECT</span> <span class="n">DATETIME</span><span class="p">(</span><span class="ss">&quot;2021-09-01 12:34:56&quot;</span><span class="p">)</span> <span class="k">AS</span> <span class="k">timestamp</span><span class="p">,</span> <span class="mi">500</span> <span class="k">AS</span> <span class="n">amount</span>
+  <span class="k">UNION</span> <span class="k">ALL</span>
+  <span class="k">SELECT</span> <span class="n">DATETIME</span><span class="p">(</span><span class="ss">&quot;2021-09-02 01:12:23&quot;</span><span class="p">)</span> <span class="k">AS</span> <span class="k">timestamp</span><span class="p">,</span> <span class="mi">150</span> <span class="k">AS</span> <span class="n">amount</span>
+  <span class="k">UNION</span> <span class="k">ALL</span>
+  <span class="k">SELECT</span> <span class="n">DATETIME</span><span class="p">(</span><span class="ss">&quot;2021-09-02 12:23:34&quot;</span><span class="p">)</span> <span class="k">AS</span> <span class="k">timestamp</span><span class="p">,</span> <span class="mi">200</span> <span class="k">AS</span> <span class="n">amount</span>
+  <span class="k">UNION</span> <span class="k">ALL</span>
+  <span class="k">SELECT</span> <span class="n">DATETIME</span><span class="p">(</span><span class="ss">&quot;2021-09-04 11:11:11&quot;</span><span class="p">)</span> <span class="k">AS</span> <span class="k">timestamp</span><span class="p">,</span> <span class="mi">700</span> <span class="k">AS</span> <span class="n">amount</span>
+<span class="p">)</span>
+<span class="k">SELECT</span>
+  <span class="nb">DATE</span><span class="p">(</span><span class="k">timestamp</span><span class="p">)</span> <span class="k">AS</span> <span class="nb">date</span><span class="p">,</span>
+  <span class="k">SUM</span><span class="p">(</span><span class="n">amount</span><span class="p">)</span> <span class="k">AS</span> <span class="n">amount</span>
+<span class="k">FROM</span>
+  <span class="n">purchases</span>
+<span class="k">GROUP</span> <span class="k">BY</span>
+  <span class="nb">date</span>
+<span class="k">ORDER</span> <span class="k">BY</span>
+  <span class="nb">date</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_minor": 0, "model_id": "07004a8b-0d06-4fe2-ba71-949027df3576", "version_major": 2}
+{"version_minor": 0, "model_id": "875f50e0-67a4-45cb-8a46-dd5a5713f7e6", "version_major": 2}
 </script></div>
 </div>
-<p>SQLお試し終わり。</p>
 </div>
 
 
 <script type="application/vnd.jupyter.widget-state+json">
-{"state": {"07004a8b-0d06-4fe2-ba71-949027df3576": {"model_name": "TableDisplayModel", "model_module": "beakerx", "model_module_version": "*", "state": {"_model_module_version": "*", "_model_name": "TableDisplayModel", "_view_module_version": "*", "_model_module": "beakerx", "_view_module": "beakerx", "_view_name": "TableDisplayView", "model": {"hasDoubleClickAction": false, "doubleClickTag": null, "contextMenuItems": [], "contextMenuTags": {}, "type": "TableDisplay", "columnNames": ["a"], "types": ["java.lang.Object"], "subtype": "TableDisplay", "stringFormatForType": {}, "stringFormatForColumn": {}, "rendererForType": {}, "rendererForColumn": {}, "alignmentForType": {}, "alignmentForColumn": {}, "columnsFrozen": {}, "columnsFrozenRight": {}, "columnsVisible": {}, "columnOrder": [], "cellHighlighters": [], "tooltips": [], "dataFontSize": null, "headerFontSize": null, "fontColor": [], "headersVertical": false, "hasIndex": null, "timeZone": null, "values": [[1], [2]], "tooManyRows": false}}}}, "version_major": 2, "version_minor": 0}
+{"state": {"875f50e0-67a4-45cb-8a46-dd5a5713f7e6": {"model_name": "TableDisplayModel", "model_module": "beakerx", "model_module_version": "*", "state": {"_model_module_version": "*", "_model_name": "TableDisplayModel", "_view_module_version": "*", "_model_module": "beakerx", "_view_module": "beakerx", "_view_name": "TableDisplayView", "model": {"hasDoubleClickAction": false, "doubleClickTag": null, "contextMenuItems": [], "contextMenuTags": {}, "type": "TableDisplay", "columnNames": ["date", "amount"], "types": ["java.lang.Object", "java.lang.Object"], "subtype": "TableDisplay", "stringFormatForType": {}, "stringFormatForColumn": {}, "rendererForType": {}, "rendererForColumn": {}, "alignmentForType": {}, "alignmentForColumn": {}, "columnsFrozen": {}, "columnsFrozenRight": {}, "columnsVisible": {}, "columnOrder": [], "cellHighlighters": [], "tooltips": [], "dataFontSize": null, "headerFontSize": null, "fontColor": [], "headersVertical": false, "hasIndex": null, "timeZone": null, "values": [["2021-09-01", 500], ["2021-09-02", 350], ["2021-09-04", 700]], "tooManyRows": false}}}}, "version_major": 2, "version_minor": 0}
 </script>
 
 
@@ -272,7 +275,7 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="README.html" title="previous page">ようこそ</a>
+    <a class='left-prev' id="prev-link" href="README.html" title="previous page">Query Me</a>
 
         </div>
         
