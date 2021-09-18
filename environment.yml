@@ -2,4 +2,4 @@ name: base
 channels:
   - conda-forge
 dependencies:
-  - xeus-sqlite
+  - xeus-sqlite=0.1.0
