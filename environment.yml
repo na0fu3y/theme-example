@@ -3,5 +3,4 @@ channels:
   - conda-forge
 dependencies:
   - xeus-sql=0.0.8
-  - soci-sqlite
-  - soci-core
+  - soci-sqlite=4.0.1
