@@ -3,10 +3,3 @@ channels:
   - conda-forge
 dependencies:
   - xeus-sqlite
-  - xeus-sql
-  - soci-core
-  - soci-sqlite
-  - ipython
-  - ipywidgets
-  - jupyter-book
-  - sqlite
