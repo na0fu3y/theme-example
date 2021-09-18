@@ -2,5 +2,6 @@ name: base
 channels:
   - conda-forge
 dependencies:
-  - xeus-sql
+  - xeus-sql=0.0.8
   - soci-sqlite
+  - soci-core
