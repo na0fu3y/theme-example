@@ -4,5 +4,9 @@ channels:
 dependencies:
   - xeus-sqlite
   - xeus-sql
+  - soci-core
   - soci-sqlite
-  - soci-postgresql
+  - ipython
+  - ipywidgets
+  - jupyter-book
+  - sqlite
